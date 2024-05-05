@@ -1,0 +1,134 @@
+:root{
+    --ratio: 0.618;
+    --width: 90vw;
+    --height: calc(var(--width) * var(--ratio));
+    --ratio-1: calc(var(--width) * pow(var(--ratio), 1));
+    --ratio-2: calc(var(--width) * pow(var(--ratio), 2));
+    --ratio-3: calc(var(--width) * pow(var(--ratio), 3));
+    --ratio-4: calc(var(--width) * pow(var(--ratio), 4));
+    --ratio-5: calc(var(--width) * pow(var(--ratio), 5));
+    --ratio-6: calc(var(--width) * pow(var(--ratio), 6));
+    --ratio-7: calc(var(--width) * pow(var(--ratio), 7));
+    --ratio-8: calc(var(--width) * pow(var(--ratio), 8));
+    --ratio-9: calc(var(--width) * pow(var(--ratio), 9));
+    --ratio-10: calc(var(--width) * pow(var(--ratio), 10));
+    --ratio-11: calc(var(--width) * pow(var(--ratio), 11));
+    --color-a: #50514f;
+    --color-b: #f25f5c;
+    --color-c: #ffe065;
+    --color-d: #237ba1;
+    --color-e: #70c1b3;
+  }
+
+  div{
+  
+    border-radius: 0 0 0 0;
+  }
+  
+  p{
+    font-family: consolas, serif;
+    font-size: 50px;
+    text-align: right;
+    margin: auto;
+    border:none;
+  }
+  
+  .layer-1{
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--color-a);
+    position:relative;
+    z-index:2;
+  }
+  
+  
+  
+  .layer-2{
+    width: var(--ratio-2);
+    height: var(--ratio-1);
+    background-color: var(--color-b);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+  }
+  
+  .layer-3{
+    width: var(--ratio-2);
+    height:var(--ratio-3);
+    background-color: var(--color-c);
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:2;
+  }
+  
+  .layer-4{
+    width: var(--ratio-4);
+    height:var(--ratio-3);
+    background-color: var(--color-d);
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:2;
+  }
+  
+  .layer-5{
+    width: var(--ratio-4);
+    height:var(--ratio-5);
+    background-color: var(--color-e);
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:2;
+  } 
+  
+  .layer-6{
+    width: var(--ratio-6);
+    height:var(--ratio-5);
+    background-color: var(--color-a);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+  } 
+  
+  .layer-7{
+    width: var(--ratio-6);
+    height:var(--ratio-7);
+    background-color: var(--color-b);
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:2;
+  } 
+  
+  .layer-8{
+    width: var(--ratio-8);
+    height:var(--ratio-7);
+    background-color: var(--color-c);
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index:2;
+  } 
+  
+  .layer-9{
+    width: var(--ratio-8);
+    height:var(--ratio-9);
+    background-color: var(--color-d);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+  } 
+  
+  .layer-10{
+    width: var(--ratio-10);
+    height:var(--ratio-9);
+    background-color: var(--color-e);
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:2;
+  } 
