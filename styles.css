@@ -20,11 +20,23 @@
     --color-e: #70c1b3;
   }
 
-  div{
-  
-    border-radius: 0 0 0 0;
+  *{
+    box-sizing: border-box;
   }
   
+
+.spiral{
+    /* border: 3px solid black; */
+    z-index: 10;
+    position:absolute;
+    border-top: 2px solid black;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+
+  }
+  
+
   p{
     font-family: consolas, serif;
     font-size: 50px;
@@ -41,6 +53,14 @@
     z-index:2;
   }
   
+  .layer-1 > .spiral{
+    width: calc(var(--height)*2);
+    height: calc(var(--height)*2);
+    border-radius:var(--height);
+    top: 0;
+    right: 0;
+    transform: rotate(45deg);    
+  }
   
   
   .layer-2{
@@ -51,7 +71,19 @@
     top:0;
     left:0;
     z-index:2;
+    
   }
+
+  .layer-2 > .spiral{
+    width: calc(var(--ratio-2)*2);
+    height: calc(var(--ratio-2)*2);
+    border-radius:var(--ratio-2);
+    top:0;
+    left:0;
+    transform: rotate(-45deg);    
+
+  }
+  
   
   .layer-3{
     width: var(--ratio-2);
@@ -61,6 +93,15 @@
     bottom:0;
     left:0;
     z-index:2;
+  }
+
+  .layer-3 > .spiral{
+    width: calc(var(--ratio-3)*2);
+    height: calc(var(--ratio-3)*2);
+    border-radius:var(--ratio-3);
+    bottom:0;
+    left:0;
+    transform:rotate(-135deg);
   }
   
   .layer-4{
@@ -73,6 +114,16 @@
     z-index:2;
   }
   
+
+  .layer-4 > .spiral{
+    width: calc(var(--ratio-4)*2);
+    height: calc(var(--ratio-4)*2);
+    border-radius:var(--ratio-4);
+    bottom:0;
+    right:0;
+    transform:rotate(135deg);
+  }
+  
   .layer-5{
     width: var(--ratio-4);
     height:var(--ratio-5);
@@ -82,6 +133,15 @@
     right:0;
     z-index:2;
   } 
+
+  .layer-5 > .spiral{
+    width: calc(var(--ratio-5)*2);
+    height: calc(var(--ratio-5)*2);
+    border-radius:var(--ratio-5);
+    top:0;
+    right:0;
+    transform:rotate(45deg);
+  }
   
   .layer-6{
     width: var(--ratio-6);
@@ -92,6 +152,16 @@
     left:0;
     z-index:2;
   } 
+
+  
+  .layer-6 > .spiral{
+    width: calc(var(--ratio-6)*2);
+    height: calc(var(--ratio-6)*2);
+    border-radius:var(--ratio-6);
+    top:0;
+    left:0;
+    transform:rotate(-45deg);
+  }
   
   .layer-7{
     width: var(--ratio-6);
@@ -103,6 +173,16 @@
     z-index:2;
   } 
   
+ .layer-7 > .spiral{
+    width: calc(var(--ratio-7)*2);
+    height: calc(var(--ratio-7)*2);
+    border-radius:var(--ratio-7);
+    bottom:0;
+    left:0;
+    transform:rotate(-135deg);
+
+  } 
+  
   .layer-8{
     width: var(--ratio-8);
     height:var(--ratio-7);
@@ -111,7 +191,18 @@
     bottom:0;
     right:0;
     z-index:2;
+
   } 
+
+  .layer-8 > .spiral{
+    width: calc(var(--ratio-8)*2);
+    height: calc(var(--ratio-8)*2);
+    border-radius:var(--ratio-8);
+    bottom:0;
+    right:0;
+    transform:rotate(135deg);
+
+  }
   
   .layer-9{
     width: var(--ratio-8);
@@ -121,7 +212,10 @@
     top:0;
     left:0;
     z-index:2;
+    
   } 
+
+ 
   
   .layer-10{
     width: var(--ratio-10);
